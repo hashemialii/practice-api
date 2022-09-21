@@ -63,14 +63,3 @@ query_parameter = {'nat': 'ir',
 response = requests.get(api_url, params=query_parameter)
 print(response.json())
 
-
-
-
-
-
-
-
-
-
-
-

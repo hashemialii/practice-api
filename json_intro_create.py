@@ -17,10 +17,3 @@ json_values = json.dumps(data)
 print(json_values)
 print(type(json_values))    # not dictionary
 
-
-
-
-
-
-
-

@@ -16,14 +16,3 @@ print(len(response.json().get('photos')))       # number of photos taken that da
 print(response.json().get('photos')[0]['img_src'])      # to see first photo
 print(response.X-RateLimit-Remaining)
 
-
-
-
-
-
-
-
-
-
-
-
