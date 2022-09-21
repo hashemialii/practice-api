@@ -1,6 +1,16 @@
 from fastapi import FastAPI
+from enum import Enum
 
 app = FastAPI()  # instance
+
+
+# the user can only use this models:
+class Models(str, Enum):  # enumeration
+    vggnet = 'vggnet'
+    resnet = 'resnet'
+    alexnet = 'alexnet'
+    googlenet = 'googlenet'
+    lemt = 'lent'
 
 
 # To write api we need : method/path/function
@@ -30,7 +40,33 @@ async def ger_user_id(userID: int):  # annotation == type validation
     return {'Message': 'You are using API for user ID: {}'.format(userID),
             'ID Data Type': '{}'.format(type(userID))}
 
-
 # now open http://127.0.0.1:8000/docs#/ and set parameter for checking
 # or search http://127.0.0.1:8000/v1/users/2
+
+
+@app.get('/v1/Models/{model_name}')
+async def specify_model(model_name: Models):
+    if model_name.value == 'vggnet':
+        return {'model name': model_name,
+                'Message': 'You are using API for model: {}'.format(model_name)}
+    if model_name.value == 'resnet':
+        return {'model name': model_name,
+                'Message': 'You are using API for model: {}'.format(model_name)}
+    if model_name.value == 'alexnet':
+        return {'model name': model_name,
+                'Message': 'You are using API for model: {}'.format(model_name)}
+    if model_name.value == 'googlenet':
+        return {'model name': model_name,
+                'Message': 'You are using API for model: {}'.format(model_name)}
+    if model_name.value == 'lemt':
+        return {'model name': model_name,
+                'Message': 'You are using API for model: {}'.format(model_name)}
+
+
+# you can check it on http://127.0.0.1:8000/docs (to add option)
+
+
+
+
+
 
