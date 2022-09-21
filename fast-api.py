@@ -65,8 +65,3 @@ async def specify_model(model_name: Models):
 
 # you can check it on http://127.0.0.1:8000/docs (to add option)
 
-
-
-
-
-
