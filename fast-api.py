@@ -1,5 +1,3 @@
-from typing import Tuple, Any
-
 from fastapi import FastAPI
 
 app = FastAPI()  # instance
