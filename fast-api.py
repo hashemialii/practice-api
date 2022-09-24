@@ -10,7 +10,7 @@ class Models(str, Enum):  # enumeration
     resnet = 'resnet'
     alexnet = 'alexnet'
     googlenet = 'googlenet'
-    lemt = 'lent'
+    lenet = 'lenet'
 
 
 # To write api we need : method/path/function
