@@ -2,6 +2,7 @@ import requests
 
 
 api_url = 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos'
+
 query_parameter = {'earth_date': '2022-09-18',
                    'api_key': 'VkMldfZFEzVIO1alQnJEzvHBIedaoxxmhisgXVco',
                    }
